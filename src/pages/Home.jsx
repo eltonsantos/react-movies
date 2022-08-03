@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const topRatedUrl = `${moviesURL}top_rated?${apiKey}&language=pt-BR`;
+    const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
     console.log(topRatedUrl);
     getTopRatedMovies(topRatedUrl);
   }, []);
@@ -31,7 +31,7 @@ const Home = () => {
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
